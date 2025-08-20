@@ -44,14 +44,12 @@ int main()
 
     // Size and capacity
     cout << "Size: " << v.size() << ", Capacity: " << v.capacity() << endl;
-
     // Resize vector
     v.resize(5, -1); // if expand, fill with -1
     cout << "After resize: ";
     for (int x : v)
         cout << x << " "; // 99 20 -1 -1 -1
     cout << endl;
-
     // Clear vector
     v.clear();
     cout << "After clear, Size: " << v.size() << endl;
