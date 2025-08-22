@@ -11,15 +11,19 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
+
         cin >> arr[i];
     }
-    int hash[13] = {0};
+    int hash[10] = {0};
     for (int i = 0; i < n; i++)
     {
         hash[arr[i]]++;
     }
     int q;
+
+    cout << "Enter teh number search" << endl;
+
     cin >> q;
-    cout << hash[q] << "Answer" << endl;
+    cout << hash[q] << " Answer" << endl;
     return 0;
 }
