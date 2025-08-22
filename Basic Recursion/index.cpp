@@ -2,25 +2,18 @@
 
 using namespace std;
 
-void reverseAnArray(int arr[], int start, int size)
+int f(int num)
 {
-    if (start >= size / 2)
+
+    if (num <= 1)
     {
-        return;
+        return num;
     }
-    swap(arr[start], arr[size - start - 1]);
-    reverseAnArray(arr, start + 1, size);
+
+    return f(num - 1) + f(num - 2);
 }
 int main()
 {
-    int arr[] = {4, 3, 2, 1};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int start = 0;
-    int end = size - 1;
-    reverseAnArray(arr, start, size);
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    cout << f(10);
     return 0;
 }
