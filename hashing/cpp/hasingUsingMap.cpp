@@ -26,11 +26,23 @@ int main()
         freq[arr[i]]++;
     }
 
-    cout << "Enter the number to search in the map" << endl;
+    int max = 0;
+    int key = -1;
 
+    for (auto fre : freq)
+    {
+        if (fre.second > max)
+        {
+
+            max = fre.second;
+            key = fre.first;
+        }
+    }
+    cout << "Element with highest frequency: " << key
+         << " (occurs " << max << " times)" << endl;
+    cout << "Enter the number to search in the map" << endl;
     int d;
     cin >> d;
     cout << "answer is  " << freq[d];
-
     return 0;
 }

@@ -10,5 +10,5 @@ for (let i = 0; i < arr.length; i++) {
 console.log(freq[2], "answer");
 
 for (let val of Object.keys(freq)) {
-  console.log(val , freq[val]);
+  console.log(val, freq[val]);
 }
